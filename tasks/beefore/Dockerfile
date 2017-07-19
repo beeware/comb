@@ -9,7 +9,7 @@ ADD . /app
 
 # Get some core tools
 RUN apt-get update
-RUN apt-get install -yy curl unzip
+RUN apt-get install -y curl unzip
 
 # Add the node package source and install nodejs
 RUN curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh

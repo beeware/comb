@@ -1,4 +1,0 @@
-push:
-    - smoke-test:
-        task: waggler
-        name: Waggle new tasks

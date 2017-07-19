@@ -1,16 +1,18 @@
 #!/bin/bash
+# Make sure we're using the right npm
+export PATH=/app/node_modules/.bin:$PATH
+
 echo "Testing $GITHUB_OWNER/$GITHUB_PROJECT_NAME @ $SHA"
 echo "Python version=`python --version`"
 echo "Node version=`node --version`"
 echo "NPM version=`npm --version`"
 echo
-# Make sure we're using the right npm
-export PATH=/app/node_modules/.bin:$PATH
-
 # Download and unpack code at the test SHA
-curl -s -L -u $GITHUB_USERNAME:$GITHUB_ACCESS_TOKEN https://github.com/$GITHUB_OWNER/$GITHUB_PROJECT_NAME/archive/$SHA.zip -o code.zip
+echo "curl -L $CODE_URL -o code.zip"
+curl -s -L $CODE_URL -o code.zip
+echo "--------------------------------------------------------------------------------"
+echo "unzip code.zip"
 unzip code.zip
-
 cd $GITHUB_PROJECT_NAME-$SHA
 echo "--------------------------------------------------------------------------------"
 echo pip install -e .
