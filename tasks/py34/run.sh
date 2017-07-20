@@ -5,6 +5,8 @@ echo
 # Download and unpack code at the test SHA
 echo "curl -L $CODE_URL -o code.zip"
 curl -s -L $CODE_URL -o code.zip
+echo "--------------------------------------------------------------------------------"
+echo "unzip code.zip"
 unzip code.zip
 
 cd $GITHUB_PROJECT_NAME-$SHA

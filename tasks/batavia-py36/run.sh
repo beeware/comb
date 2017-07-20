@@ -21,13 +21,13 @@ echo "--------------------------------------------------------------------------
 echo pip install pytest pytest-xdist pytest-runner
 pip install pytest pytest-xdist pytest-runner
 echo "--------------------------------------------------------------------------------"
-echo npm install --unsafe-perm
-npm install --unsafe-perm
+echo npm install --unsafe-perm --no-color
+npm install --unsafe-perm --no-color
 echo "--------------------------------------------------------------------------------"
 # Precompile to avoid duplicated effort when pytest starts.
 echo ./node_modules/.bin/webpack --progress
 ./node_modules/.bin/webpack --progress
 export PRECOMPILE=false
 echo "================================================================================"
-echo pytest -n auto --ignore node_modules
-pytest -n auto --ignore node_modules
+echo pytest -v -n auto --ignore node_modules
+pytest -v -n auto --ignore node_modules

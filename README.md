@@ -7,4 +7,4 @@ Getting started
 ---------------
 
     $ pip install waggle
-    $ waggle waggler
+    $ waggle tasks
