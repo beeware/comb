@@ -1,7 +1,7 @@
 Comb
 ====
 
-A repository of BeeKeeper task configurations.
+A repository of BeeKeeper task configurations used by the BeeWare project.
 
 Getting started
 ---------------
