@@ -8,7 +8,7 @@ WORKDIR /app
 ADD . /app
 
 # Add Java and ant
-RUN apt-get install -y default-jdk ant
+RUN apt-get install -y libpython3.4-testsuite default-jdk ant
 
 # Run the test with a waggle report
 CMD ["./run.sh"]
