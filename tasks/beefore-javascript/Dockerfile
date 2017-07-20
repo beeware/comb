@@ -11,5 +11,15 @@ ADD . /app
 RUN apt-get update
 RUN apt-get install -y curl unzip
 
+# Add the node package source and install nodejs
+RUN curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
+RUN chmod 755 nodesource_setup.sh
+RUN ./nodesource_setup.sh
+RUN apt-get install -y nodejs
+RUN npm install npm
+
+# Install node requirements
+RUN npm install
+
 # Run the test
 CMD ["./run.sh"]
