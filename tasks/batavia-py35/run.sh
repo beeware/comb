@@ -30,4 +30,4 @@ echo ./node_modules/.bin/webpack --progress
 export PRECOMPILE=false
 echo "================================================================================"
 echo pytest -v -n auto --ignore node_modules
-pytest -v -n auto --ignore node_modules
+pytest -v -n auto --maxfail=20 --ignore node_modules
