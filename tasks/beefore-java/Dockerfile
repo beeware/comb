@@ -11,5 +11,8 @@ ADD . /app
 RUN apt-get update
 RUN apt-get install -y curl unzip
 
+# Add Java and ant
+RUN apt-get install -y default-jdk ant
+
 # Run the test
 CMD ["./run.sh"]
