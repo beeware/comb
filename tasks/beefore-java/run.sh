@@ -1,6 +1,8 @@
 #!/bin/bash
 echo "Running Beefore $TASK task on $GITHUB_OWNER/$GITHUB_PROJECT_NAME @ $SHA"
 echo "Python version=`python --version`"
+java -version
+ant -version
 echo
 # Download and unpack code at the test SHA
 echo "curl -L $CODE_URL -o code.zip"
