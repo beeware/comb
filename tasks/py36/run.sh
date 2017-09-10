@@ -10,6 +10,9 @@ echo "unzip code.zip"
 unzip code.zip
 
 cd $GITHUB_PROJECT_NAME-$SHA
+if [ -e "$TEST_DIR" ]; then
+    cd $TEST_DIR
+fi
 echo "--------------------------------------------------------------------------------"
 echo pip install -e .
 pip install -e .
