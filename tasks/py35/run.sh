@@ -14,6 +14,13 @@ if [ -e "$TEST_DIR" ]; then
     cd $TEST_DIR
 fi
 echo "--------------------------------------------------------------------------------"
+for pkg_dir in $SRC_REQUIRES; do
+    echo Installing $pkg_dir from src
+    pushd $pkg_dir
+    pip install -e .
+    popd
+done
+echo "--------------------------------------------------------------------------------"
 echo pip install -e .
 pip install -e .
 echo "================================================================================"
