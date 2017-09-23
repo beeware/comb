@@ -18,13 +18,13 @@ for pkg_dir in $SRC_REQUIRES; do
     popd
 done
 echo "--------------------------------------------------------------------------------"
-if [ -e "$TEST_DIR" ]; then
+if [ "$TEST_DIR" ]; then
     pushd $TEST_DIR
     echo Installing test code from $TEST_DIR
 fi
 echo pip install -e .
 pip install -e .
-if [ -e "$TEST_DIR" ]; then
+if [ "$TEST_DIR" ]; then
     popd
 fi
 echo "--------------------------------------------------------------------------------"
@@ -35,7 +35,7 @@ for pkg_dir in $SRC_DEPENDANTS; do
     popd
 done
 echo "================================================================================"
-if [ -e "$TEST_DIR" ]; then
+if [ "$TEST_DIR" ]; then
     cd $TEST_DIR
     echo Running test code from $TEST_DIR
 fi
