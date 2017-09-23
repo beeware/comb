@@ -9,20 +9,35 @@ echo "--------------------------------------------------------------------------
 echo "unzip code.zip"
 unzip code.zip
 
-cd $GITHUB_PROJECT_NAME-$SHA
-if [ -e "$TEST_DIR" ]; then
-    cd $TEST_DIR
-fi
 echo "--------------------------------------------------------------------------------"
+cd $GITHUB_PROJECT_NAME-$SHA
 for pkg_dir in $SRC_REQUIRES; do
-    echo Installing $pkg_dir from src
+    echo Installing requirement $pkg_dir from src
     pushd $pkg_dir
     pip install -e .
     popd
 done
 echo "--------------------------------------------------------------------------------"
+if [ -e "$TEST_DIR" ]; then
+    pushd $TEST_DIR
+    echo Installing test code from $TEST_DIR
+fi
 echo pip install -e .
 pip install -e .
+if [ -e "$TEST_DIR" ]; then
+    popd
+fi
+echo "--------------------------------------------------------------------------------"
+for pkg_dir in $SRC_DEPENDANTS; do
+    echo Installing dependant $pkg_dir from src
+    pushd $pkg_dir
+    pip install -e .
+    popd
+done
 echo "================================================================================"
+if [ -e "$TEST_DIR" ]; then
+    cd $TEST_DIR
+    echo Running test code from $TEST_DIR
+fi
 echo python setup.py test
 python setup.py test
