@@ -10,6 +10,11 @@ echo "unzip code.zip"
 unzip code.zip
 
 echo "--------------------------------------------------------------------------------"
+for pkg in $EXTRA_REQUIRES; do
+    echo Installing extra requirement $pkg
+    pip install $pkg
+done
+echo "--------------------------------------------------------------------------------"
 cd $GITHUB_PROJECT_NAME-$SHA
 for pkg_dir in $SRC_REQUIRES; do
     echo Installing requirement $pkg_dir from src
