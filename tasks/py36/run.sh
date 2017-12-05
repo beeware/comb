@@ -10,6 +10,11 @@ echo "unzip code.zip"
 unzip code.zip
 
 echo "--------------------------------------------------------------------------------"
+for pkg in $EXTRA_REQUIRES; do
+    echo Installing extra requirement $pkg
+    pip install $pkg
+done
+echo "--------------------------------------------------------------------------------"
 cd $GITHUB_PROJECT_NAME-$SHA
 for pkg_dir in $SRC_REQUIRES; do
     echo Installing requirement $pkg_dir from src
@@ -18,13 +23,13 @@ for pkg_dir in $SRC_REQUIRES; do
     popd
 done
 echo "--------------------------------------------------------------------------------"
-if [ -e "$TEST_DIR" ]; then
+if [ "$TEST_DIR" ]; then
     pushd $TEST_DIR
     echo Installing test code from $TEST_DIR
 fi
 echo pip install -e .
 pip install -e .
-if [ -e "$TEST_DIR" ]; then
+if [ "$TEST_DIR" ]; then
     popd
 fi
 echo "--------------------------------------------------------------------------------"
@@ -35,7 +40,7 @@ for pkg_dir in $SRC_DEPENDANTS; do
     popd
 done
 echo "================================================================================"
-if [ -e "$TEST_DIR" ]; then
+if [ "$TEST_DIR" ]; then
     cd $TEST_DIR
     echo Running test code from $TEST_DIR
 fi
