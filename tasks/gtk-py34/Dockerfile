@@ -8,7 +8,14 @@ WORKDIR /app
 ADD . /app
 
 # Install GTK+3 python bindings
-RUN apk add py3-gobject3
+RUN apt-get install -y python3-gi python3-gi-cairo gir1.2-gtk-3.0
+
+# `gi` is installed to /usr/lib/python3/dist-packages, which is not in the
+# python path by default.
+ENV PYTHONPATH=$PYTHONPATH:/usr/lib/python3/dist-packages/
+
+# _gi.so must exist for `gi` to import correctly
+RUN ln /usr/lib/python3/dist-packages/gi/_gi.*.so /usr/lib/python3/dist-packages/gi/_gi.so
 
 # Run the test with a waggle report
 CMD ["./run.sh"]
