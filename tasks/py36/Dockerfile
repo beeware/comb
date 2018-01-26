@@ -8,6 +8,7 @@ WORKDIR /app
 ADD . /app
 
 # Get some core tools
+RUN apt-get update
 RUN apt-get update && apt-get install -y curl unzip apt-transport-https
 
 # Run the test with a waggle report
