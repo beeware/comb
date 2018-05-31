@@ -13,6 +13,9 @@ RUN apt-get install -y python3-gi python3-gi-cairo gir1.2-gtk-3.0
 # Install pygobject build dependencies
 RUN apt-get install -y python3-dev libgirepository1.0-dev libcairo2-dev pkg-config
 
+# Install xvfb
+RUN apt-get install -y xvfb
+
 # `gi` is installed to /usr/lib/python3/dist-packages, which is not in the
 # python path by default.
 ENV PYTHONPATH=$PYTHONPATH:/usr/lib/python3/dist-packages/

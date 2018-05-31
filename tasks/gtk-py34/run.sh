@@ -44,5 +44,6 @@ if [ "$TEST_DIR" ]; then
     cd $TEST_DIR
     echo Running test code from $TEST_DIR
 fi
-echo python setup.py test
-python setup.py test
+# Run tests under xvfb display server
+echo xvfb-run -a python setup.py test
+xvfb-run -a python setup.py test
