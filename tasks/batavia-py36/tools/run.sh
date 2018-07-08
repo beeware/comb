@@ -1,19 +1,21 @@
 #!/bin/bash
-# Make sure we're using the right npm
-export PATH=/app/node_modules/.bin:$PATH
-
-echo "Testing $GITHUB_OWNER/$GITHUB_PROJECT_NAME @ $SHA"
 echo "Python version=`python --version`"
 echo "Node version=`node --version`"
 echo "NPM version=`npm --version`"
 echo
-# Download and unpack code at the test SHA
-echo "curl -L $CODE_URL -o code.zip"
-curl -s -L $CODE_URL -o code.zip
-echo "--------------------------------------------------------------------------------"
-echo "unzip code.zip"
-unzip code.zip
-cd $GITHUB_PROJECT_NAME-$SHA
+if [ -e "/app/beekeeper.yml" ]; then
+    echo "Testing local code"
+else
+    echo "Testing $GITHUB_OWNER/$GITHUB_PROJECT_NAME @ $SHA"
+    echo
+    # Download and unpack code at the test SHA
+    echo "curl -L $CODE_URL -o code.zip"
+    curl -s -L $CODE_URL -o code.zip
+    echo "--------------------------------------------------------------------------------"
+    echo "unzip code.zip"
+    unzip code.zip
+    cd $GITHUB_PROJECT_NAME-$SHA
+fi
 echo "--------------------------------------------------------------------------------"
 echo pip install -e .
 pip install -e .

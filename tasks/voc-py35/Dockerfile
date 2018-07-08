@@ -1,14 +1,15 @@
 # Use the Beeware Python image as a starting point.
 FROM beeware/py35
 
-# Set the working directory to /app
-WORKDIR /app
-
 # Copy the runtest script into the container
-ADD . /app
+ADD tools /tools
+
+# Slim variants don't have a man directory,
+# which causes problems with update-alternatives
+RUN mkdir -p /usr/share/man/man1
 
 # Add Java and ant
-RUN apt-get install -y default-jdk ant
+RUN apt-get install -y openjdk-8-jdk-headless ant
 
 # Run the test with a waggle report
-CMD ["./run.sh"]
+CMD ["/tools/run.sh"]
