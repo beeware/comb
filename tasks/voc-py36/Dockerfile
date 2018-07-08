@@ -1,5 +1,5 @@
-# Use the BeeKeeper Python image as a starting point.
-FROM beekeeper/py36
+# Use the Beeware Python image as a starting point.
+FROM beeware/py36
 
 # Set the working directory to /app
 WORKDIR /app
