@@ -20,8 +20,8 @@ echo "--------------------------------------------------------------------------
 echo pip install -e .
 pip install -e .
 echo "--------------------------------------------------------------------------------"
-echo pip install pytest pytest-xdist pytest-runner
-pip install pytest pytest-xdist pytest-runner
+echo pip install pytest pytest-xdist pytest-runner pytest-tldr
+pip install pytest pytest-xdist pytest-runner pytest-tldr
 echo "--------------------------------------------------------------------------------"
 # Precompile to avoid duplicated effort when pytest starts.
 echo ant java

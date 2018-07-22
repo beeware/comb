@@ -1,5 +1,5 @@
-# Use the BeeKeeper Python image as a starting point.
-FROM beekeeper/py35
+# Use the BeeWare Python image as a starting point.
+FROM beeware/py35
 
 # Copy the runtest script into the container
 ADD tools /tools

@@ -20,8 +20,8 @@ echo "--------------------------------------------------------------------------
 echo pip install -e .
 pip install -e .
 echo "--------------------------------------------------------------------------------"
-echo pip install pytest pytest-xdist pytest-runner
-pip install pytest pytest-xdist pytest-runner
+echo pip install pytest pytest-xdist pytest-runner pytest-tldr
+pip install pytest pytest-xdist pytest-runner pytest-tldr
 echo "--------------------------------------------------------------------------------"
 echo npm install --unsafe-perm --no-color
 npm install --unsafe-perm --no-color
