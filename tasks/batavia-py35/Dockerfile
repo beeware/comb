@@ -4,6 +4,9 @@ FROM beeware/py35
 # Copy the runtest script into the container
 ADD tools /tools
 
+# Install pytest and runners
+RUN pip install pytest pytest-xdist pytest-runner pytest-tldr
+
 # Add the node package source and install nodejs
 RUN cd /tools && \
     apt-get install -y gnupg && \

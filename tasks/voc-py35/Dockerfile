@@ -4,6 +4,9 @@ FROM beeware/py35
 # Copy the runtest script into the container
 ADD tools /tools
 
+# Install pytest and runners
+RUN pip install pytest pytest-xdist pytest-runner pytest-tldr
+
 # Slim variants don't have a man directory,
 # which causes problems with update-alternatives
 RUN mkdir -p /usr/share/man/man1
