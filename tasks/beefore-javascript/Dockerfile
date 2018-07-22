@@ -1,5 +1,5 @@
 # Use a the beeware/beefore image as a starting point
-FROM beeware/beefore
+FROM pybee/beefore
 
 # Copy the runtest script into the container
 ADD tools /tools

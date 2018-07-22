@@ -1,5 +1,5 @@
 # Use the Beeware Python image as a starting point.
-FROM beeware/py34
+FROM pybee/py34
 
 # Set the working directory to /app
 WORKDIR /app

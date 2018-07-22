@@ -1,5 +1,5 @@
 # Use the beeware Python 3.6 image as a starting point.
-FROM beeware/py36
+FROM pybee/py36
 
 # Copy the runtest script into the container
 ADD tools /tools
