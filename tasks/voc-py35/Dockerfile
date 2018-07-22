@@ -12,7 +12,7 @@ RUN pip install pytest pytest-xdist pytest-runner pytest-tldr
 RUN mkdir -p /usr/share/man/man1
 
 # Add Java and ant
-RUN apt-get install -y openjdk-7-jre-headless ant
+RUN apt-get install -y openjdk-8-jre-headless ant
 
 # Run the test with a waggle report
 CMD ["/tools/run.sh"]
