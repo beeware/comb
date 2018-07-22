@@ -1,16 +1,14 @@
-# Use an official Python runtime as a parent image
-FROM python:3.6.6-slim
-
-# Set the working directory to a mountable /app directory
-WORKDIR /app
-VOLUME /app
-
-# Get some core tools
-RUN apt-get update
-RUN apt-get install -y curl unzip apt-transport-https
+# Use the beeware Python 3.6 image as a starting point.
+FROM beeware/py36
 
 # Copy the runtest script into the container
 ADD tools /tools
+
+# Get some core tools
+RUN apt-get install -y git
+
+# Install beefore
+RUN pip install --pre beefore
 
 # Run the test
 CMD ["/tools/run.sh"]
