@@ -1,7 +1,7 @@
 Comb
 ====
 
-A repository of BeeKeeper task configurations used by the BeeWare project.
+A repository of [BeeKeeper](https://github.com/pybee/beekeeper) task configurations used by the [BeeWare](https://pybee.org) project.
 
 Each branch of this repository is a Docker image. These images are automatically built and published as part of the `pybee` organization on Docker Hub.
 
