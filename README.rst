@@ -3,33 +3,13 @@ Comb
 
 A repository of BeeKeeper task configurations used by the BeeWare project.
 
-Getting started
----------------
+Each subdirectory of the `tasks` directory is a Docker image. These images
+are automatically built and published as part of the `pybee` organization
+on Docker Hub.
 
-Create a file named `.env` in your current working directory that contains
-the following content::
-
-    AWS_REGION=<Your AWS region (e.g., us-west-2)>
-    AWS_ACCESS_KEY_ID=<Your AWS access key>
-    AWS_SECRET_ACCESS_KEY=<Your AWS secret access key>
-
-Then, install waggle, and waggle the tasks directory::
-
-    $ pip install waggle
-    $ waggle tasks
-
-Or, if you only want *some* of the tasks, you can run::
-
-    $ waggle <path to task>
-
-Advanced usage
---------------
-
-This repository contains a generic set of tasks for Python (including web)
-development. If you have specific testing needs, you should fork this
-repository, add task definitions that meet your own needs, and waggle those
-tasks. You will then be able to reference those task definitions in your
-BeeKeeper configurations.
+If your own testing needs don't match these base images, they can be used
+as a template for your own Docker images, which can be referenced in the
+BeeKeeper configuration file for your project.
 
 Community
 ---------
