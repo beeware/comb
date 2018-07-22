@@ -1,11 +1,9 @@
 Comb
 ====
 
-A repository of BeeKeeper task configurations used by the BeeWare project.
+A Docker image for building Python 3.7 projects on [BeeKeeper](https://github.com/pybee/beekeeper).
 
-Each branch of this repository is a Docker image. These images are automatically built and published as part of the `pybee` organization on Docker Hub.
-
-If your own testing needs don't match these base images, they can be used as a template for your own Docker images, which can be referenced in the BeeKeeper configuration file for your project.
+If your own testing needs don't match this base image, you can use it as a template for your own Docker image, which can be referenced in the BeeKeeper configuration file for your project.
 
 Community
 ---------
