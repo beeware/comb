@@ -8,6 +8,9 @@ VOLUME /app
 # Get some core tools
 RUN apt-get update && apt-get install -y curl unzip apt-transport-https
 
+# Update core Python tools
+RUN pip install -U pip
+
 # Copy the runtest script into the container
 ADD tools /tools
 
