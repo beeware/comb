@@ -8,7 +8,7 @@ ADD tools /tools
 RUN apt-get install -y git
 
 # Install beefore
-RUN pip install beefore
+RUN pip install beefore==0.2.1
 
 # Run the test
 CMD ["/tools/run.sh"]
