@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Python version=`python --version`"
-echo "Java version=`java -version`"
+java -version
 echo "Beefore version=`beefore --version`"
 echo
 if [ -e "/app/beekeeper.yml" ]; then
