@@ -7,6 +7,9 @@ WORKDIR /app
 # Copy the runtest script into the container
 ADD tools /tools
 
+# Install XVFB
+RUN apt-get install -y xvfb
+
 # Install GTK+3 python bindings
 RUN apt-get install -y python3-gi python3-gi-cairo gir1.2-gtk-3.0
 
@@ -20,5 +23,5 @@ ENV PYTHONPATH=$PYTHONPATH:/usr/lib/python3/dist-packages/
 # _gi.so must exist for `gi` to import correctly
 RUN ln /usr/lib/python3/dist-packages/gi/_gi.*.so /usr/lib/python3/dist-packages/gi/_gi.so
 
-# Run the test with a waggle report
+# Run the tests
 CMD ["/tools/run.sh"]

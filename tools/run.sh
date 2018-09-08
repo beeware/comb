@@ -57,5 +57,5 @@ if [ "$TEST_DIR" ]; then
 else
     echo Running test code from project root
 fi
-echo python setup.py test
-python setup.py test
+echo xvfb-run -a -s '-screen 0 2048x1536x24' python setup.py test
+xvfb-run -a -s '-screen 0 2048x1536x24' python setup.py test
