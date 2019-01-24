@@ -10,7 +10,7 @@ RUN pip install pytest pytest-xdist pytest-runner pytest-tldr
 # Add the node package source and install nodejs
 RUN cd /tools && \
     apt-get install -y gnupg && \
-    curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh && \
+    curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh && \
     chmod 755 nodesource_setup.sh && \
     ./nodesource_setup.sh && \
     apt-get install -y nodejs
