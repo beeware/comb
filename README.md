@@ -20,7 +20,6 @@ It contains the following images:
 * Python + GTK
   - [Python 3.5](https://github.com/pybee/comb/tree/gtk-py35)
   - [Python 3.6](https://github.com/pybee/comb/tree/gtk-py36)
-  - [Python 3.7](https://github.com/pybee/comb/tree/gtk-py37)
 * [VOC](https://github.com/pybee/voc)
   - [Python 3.4](https://github.com/pybee/comb/tree/voc-py34)
   - [Python 3.5](https://github.com/pybee/comb/tree/voc-py35)
