@@ -10,7 +10,6 @@ If your own testing needs don't match these base images, they can be used as a t
 It contains the following images:
 
 * Python
-  - [Python 3.4](https://github.com/pybee/comb/tree/py34)
   - [Python 3.5](https://github.com/pybee/comb/tree/py35)
   - [Python 3.6](https://github.com/pybee/comb/tree/py36)
   - [Python 3.7](https://github.com/pybee/comb/tree/py37)
@@ -19,7 +18,6 @@ It contains the following images:
   - [Java](https://github.com/pybee/comb/tree/beefore-jaba)
   - [Javascript](https://github.com/pybee/comb/tree/beefore-javascript)
 * Python + GTK
-  - [Python 3.4](https://github.com/pybee/comb/tree/gtk-py34)
   - [Python 3.5](https://github.com/pybee/comb/tree/gtk-py35)
   - [Python 3.6](https://github.com/pybee/comb/tree/gtk-py36)
 * [VOC](https://github.com/pybee/voc)
@@ -27,9 +25,9 @@ It contains the following images:
   - [Python 3.5](https://github.com/pybee/comb/tree/voc-py35)
   - [Python 3.6](https://github.com/pybee/comb/tree/voc-py36)
 * [Batavia](https://github.com/pybee/batavia)
-  - [Python 3.4](https://github.com/pybee/comb/tree/batavia-py34)
   - [Python 3.5](https://github.com/pybee/comb/tree/batavia-py35)
   - [Python 3.6](https://github.com/pybee/comb/tree/batavia-py36)
+  - [Python 3.7](https://github.com/pybee/comb/tree/batavia-py37)
 
 Community
 ---------
