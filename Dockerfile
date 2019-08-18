@@ -5,14 +5,14 @@ FROM pybee/py37
 ADD tools /tools
 
 # Install pytest and runners
-RUN pip install pytest pytest-xdist pytest-tldr pytest-runner
+RUN pip install pytest pytest-xdist pytest-runner pytest-tldr
 
 # Slim variants don't have a man directory,
 # which causes problems with update-alternatives
 RUN mkdir -p /usr/share/man/man1
 
-# Add Java, ant, and git
-RUN apt-get install -y openjdk-11-jdk-headless ant git
+# Add Java and ant
+RUN apt-get install -y openjdk-11-jdk-headless ant
 
 # Run the test with a waggle report
 CMD ["/tools/run.sh"]
