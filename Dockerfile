@@ -6,7 +6,7 @@ WORKDIR /app
 VOLUME /app
 
 # Get some core tools
-RUN apt-get update && apt-get install -y curl unzip apt-transport-https
+RUN apt-get update && apt-get install -y curl unzip apt-transport-https git
 
 # Update core Python tools
 RUN pip install -U pip
