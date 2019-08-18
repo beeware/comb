@@ -1,12 +1,12 @@
 # Use an official Python runtime as a parent image
-FROM python:3.5.6-slim
+FROM python:3.5.7-slim
 
 # Set the working directory to a mountable /app directory
 WORKDIR /app
 VOLUME /app
 
 # Get some core tools
-RUN apt-get update && apt-get install -y curl unzip apt-transport-https
+RUN apt-get update && apt-get install -y curl unzip apt-transport-https git
 
 # Update core Python tools
 RUN pip install -U pip
