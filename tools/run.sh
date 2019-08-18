@@ -25,5 +25,5 @@ echo ant java
 ant java
 export PRECOMPILE=false
 echo "================================================================================"
-echo pytest -v --maxfail=1
-pytest -v --maxfail=1
+echo pytest -v -n auto --maxfail=20
+pytest -v -n auto --maxfail=20
