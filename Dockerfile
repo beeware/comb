@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.7.2-slim
+FROM python:3.7.4-slim
 
 # Set the working directory to a mountable /app directory
 WORKDIR /app
