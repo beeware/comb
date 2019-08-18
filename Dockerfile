@@ -5,7 +5,7 @@ FROM pybee/py37
 ADD tools /tools
 
 # Install pytest and runners
-RUN pip install pytest pytest-xdist pytest-runner pytest-tldr
+RUN pip install pytest pytest-xdist pytest-tldr pytest-runner
 
 # Slim variants don't have a man directory,
 # which causes problems with update-alternatives
