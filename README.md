@@ -1,3 +1,8 @@
+THIS PROJECT HAS BEEN ARCHIVED
+==============================
+
+**The BeeWare Project has stopped using BeeKeeper for CI; we have migrated all our CI to Github Actions.** 
+
 Comb
 ====
 
